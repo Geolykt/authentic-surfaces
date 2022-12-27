@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.geolykt</groupId>
+    <artifactId>authentic-surfaces</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Authentic Surfaces</name>
+    <description>A very mathematical and sterile world. Up to you to change that, if you dare</description>
+
+    <repositories>
+        <repository>
+            <id>sponge</id>
+            <url>https://repo.spongepowered.org/repository/maven-public/</url>
+        </repository>
+        <repository>
+            <id>geolykt</id>
+            <url>https://geolykt.de/maven/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>de.geolykt.starloader</groupId>
+            <artifactId>launcher</artifactId>
+            <version>20221221</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>de.geolykt</groupId>
+            <artifactId>theotown</artifactId>
+            <version>1.10.93p</version>
+            <classifier>potemkin</classifier>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <defaultGoal>clean package</defaultGoal>
+        <resources>
+            <resource>
+                <directory>src/main/resources/</directory>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>.</directory>
+                <includes>
+                    <include>LICENSE.md</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <target>11</target>
+                    <source>11</source>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

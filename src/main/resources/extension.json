@@ -1,0 +1,7 @@
+{
+  "entrypoint": "de.geolykt.surface.AuthenticSurface",
+  "name": "AuthenticSurface",
+  "version": "${version}",
+  "mixinConfig": "surface-mixins.json",
+  "dependencies": [ ]
+}

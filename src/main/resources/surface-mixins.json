@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "de.geolykt.surface.mixins",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_11",
+  "mixins": [
+    "CityCreatorMixins",
+    "CityGeneratorMixins",
+    "CreateCityStageMixins",
+    "GroundMixins",
+    "LoadingStageMixins"
+  ]
+}
